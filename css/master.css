@@ -1,6 +1,12 @@
-body {}
+html, body {
+  scroll-behavior: smooth;
+}
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @font-face {
   font-family: 'Montserrat', sans-serif;
@@ -14,19 +20,21 @@ h1 {
 .content-grid {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: 37% 63%;
+  grid-template-columns: [menu-start] 37% [menu-end content-start] 63% [content-end];
+  grid-template-rows: auto;
 }
 
-.intro {
-  grid-column: 1 /2;
-  width: 100%;
+.menu {
+  position: fixed;
+  grid-column: menu-start / menu-end;
   height: 100vh;
+  width: 37%;
   background-color: #FAE8A5;
   display: flex;
   align-items: center;
 }
 
-.intro-text {
+.menu-text {
   width: 15rem;
   margin: 0 auto;
   z-index: 1;
@@ -36,7 +44,28 @@ h1 {
   background-repeat: no-repeat;
 }
 
+ul {
+  list-style-type: none;
+  font-size: 2em;
+  color: #313D6C;
+  font-weight: 700;
+}
+
+li {
+  padding: 1em 0;
+}
+
+li:first-child {
+  padding-top: 0;
+}
+
+li a, table a {
+  color: inherit;
+}
+
 .toucan-image {
+  grid-column: content-start / content-end;
+  height: 100vh;
   background-image: url("../images/toucan.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -55,21 +84,88 @@ h1 {
   height: 100%;
 }
 
-
-.about {
-  grid-column: 1 /2;
-  width: 100%;
-  height: 100vh;
-  background-color: #FAE8A5;
-  text-align: right;
-  font-size: 2rem;
-  background-image: url("../images/blob2.svg");
-  background-size: 12rem;
-  background-position: 90% 10%;
-  background-repeat: no-repeat;
-
-}
-
 .about h1 {
   margin: 2rem;
+}
+
+#about {
+  display: inline-block;
+  grid-column: content-start / content-end;
+  padding: 3%;
+  font-size: 2rem;
+}
+
+#about img {
+  width: 300px;
+  top: 0;
+  padding-bottom: 3%;
+}
+
+#work {
+  grid-column: content-start / content-end;
+}
+
+.work-grids {
+  display: grid;
+  height: auto;
+  /* width: 100%; */
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  text-align: center;
+}
+
+.work-grids>*:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.work-grids>* {
+  border: 1px solid white;
+  padding-bottom: 100%;
+}
+
+.work-entry {
+  background-color: #313D6C;
+  position: relative;
+  text-align: center;
+}
+
+.entry-content {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.entry-content h1 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+}
+
+#contact {
+  grid-column: content-start / content-end;
+  padding: 3%;
+  font-size: 1.5rem;
+  color: #313D6C;
+  line-height: 2;
+  height: 200px;
+}
+
+#contact>table {
+  width: 100%;
+}
+
+footer {
+  grid-column: content-start / content-end;
+  height: 70px;
+  background-color: #313D6C;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
 }
