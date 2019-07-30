@@ -1,15 +1,19 @@
 html, body {
   scroll-behavior: smooth;
+  width: 100%;
 }
+
+@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
 
 body {
   font-family: 'Montserrat', sans-serif;
+  color: #313D6C;
+  font-size: 1em;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 @font-face {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
 }
 
 h1 {
@@ -34,13 +38,20 @@ h1 {
   align-items: center;
 }
 
+.menu img {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  margin: 3%;
+}
+
 .menu-text {
   width: 15rem;
   margin: 0 auto;
   z-index: 1;
   text-align: right;
   vertical-align: middle;
-  background-image: url("../images/blob1.svg");
+  background-image: url("../images/menu-blob.svg");
   background-repeat: no-repeat;
 }
 
@@ -66,7 +77,7 @@ li a, table a {
 .toucan-image {
   grid-column: content-start / content-end;
   height: 100vh;
-  background-image: url("../images/toucan.jpg");
+  background-image: url("../images/main-toucan.jpg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
@@ -84,7 +95,11 @@ li a, table a {
   height: 100%;
 }
 
-.about h1 {
+#toucan-logo {
+  display: none;
+}
+
+#about h1 {
   margin: 2rem;
 }
 
@@ -93,6 +108,9 @@ li a, table a {
   grid-column: content-start / content-end;
   padding: 3%;
   font-size: 2rem;
+  line-height: 3rem;
+  background-color: #FAE8A5cc;
+  color:
 }
 
 #about img {
@@ -103,6 +121,16 @@ li a, table a {
 
 #work {
   grid-column: content-start / content-end;
+  background-color: #313D6C;
+}
+
+#work h1 {
+  color: white;
+}
+
+#work>h1:first-of-type {
+  /* font-size: 4rem; */
+  margin-left: 3%;
 }
 
 .work-grids {
@@ -119,14 +147,13 @@ li a, table a {
 }
 
 .work-grids>* {
-  border: 1px solid white;
-  padding-bottom: 100%;
+  /* border: 1px solid white; */
 }
 
 .work-entry {
-  background-color: #313D6C;
   position: relative;
   text-align: center;
+  padding-bottom: 100%;
 }
 
 .entry-content {
@@ -135,7 +162,8 @@ li a, table a {
   transform: translateY(-50%);
   text-align: center;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
+  transition-duration: 1s;
 }
 
 .entry-content h1 {
@@ -144,13 +172,70 @@ li a, table a {
   text-align: center;
 }
 
+#entry1 {
+  background-image: url("../images/mindmakers-thumb.jpg");
+  background-size: contain;
+}
+
+#entry2 {
+  background-image: url("../images/inches-thumb.png");
+  background-size: contain;
+}
+
+#entry3 {
+  /* background-image: url("../images/mindmakers-thumb.jpg"); */
+  background-size: contain;
+}
+
+#entry4 {
+  background-image: url("../images/hallmark-thumb.jpg");
+  background-size: contain;
+}
+
+.overlay {
+  background-color: #313D6Ccc;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition-duration: 1s;
+}
+
+#entry1:hover>*, #entry2:hover>*, #entry3:hover>*, #entry4:hover>*, #entry5:hover>*, #entry6:hover>* {
+  opacity: 0;
+}
+
 #contact {
   grid-column: content-start / content-end;
   padding: 3%;
+  padding-bottom: 100px;
   font-size: 1.5rem;
   color: #313D6C;
   line-height: 2;
-  height: 200px;
+  height: auto;
+  background-color: #FAE8A5cc;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: auto;
+}
+
+.two-column p {
+  margin: 0;
+}
+
+.two-column a {
+  color: inherit;
+}
+
+.two-column textarea {
+  width: 300px;
 }
 
 #contact>table {
@@ -168,4 +253,80 @@ footer {
 
 footer p {
   margin: 0;
+}
+
+form {
+  margin-top: 50px;
+}
+
+label {
+  display: block;
+  margin-top: 30px;
+}
+
+input, textarea {
+  background-color: #ffffffaa;
+  border-radius: 10px;
+  border: 2px solid #313D6C;
+}
+
+#send-button {
+  background-color: #313D6C;
+  color: #FAE8A5;
+  width: 200px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 899px) {
+  .menu {
+    display: none;
+  }
+
+  .content-grid {
+    grid-template-columns: [content-start] 100% [content-end];
+  }
+
+  .toucan-image {
+    height: 90vh;
+    text-align: right;
+  }
+
+  #toucan-logo {
+    text-align: right;
+    display: inline;
+    margin: 3% 3% 0 0;
+    width: 100px;
+    height: auto;
+  }
+
+  .toucan-image h1 {
+    margin-top: 0;
+  }
+
+  #about p {
+    font-size: 2rem;
+    line-height: normal;
+    hyphens: auto;
+  }
+
+  #about img {
+    display: none;
+  }
+
+  .work-grids {
+    grid-template-columns: repeat(auto-fill, 100%);
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  #entry1:hover>*, #entry2:hover>*, #entry3:hover>*, #entry4:hover>*, #entry5:hover>*, #entry6:hover>* {
+    opacity: 1;
+  }
+
+  .two-column {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-rows: auto;
+  }
 }
