@@ -1,11 +1,14 @@
 @import url("http://fonts.googleapis.com/css?family=Montserrat:400,700");
-
 @import url("./normalize.css");
-
 
 html, body {
   scroll-behavior: smooth;
   width: 100%;
+}
+
+.megacontainer {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 ::selection {
@@ -13,14 +16,11 @@ html, body {
   color: white;
 }
 
-
-
-
-
 body {
   font-family: 'Montserrat', sans-serif;
   color: #313D6C;
   font-size: 1em;
+  background-color: #FBEDB7;
 }
 
 @font-face {
@@ -33,34 +33,60 @@ h1 {
   color: #313D6C;
 }
 
+.bgcolorleft {
+  background-color: #FAE8A5;
+  height: 100vh;
+  position: fixed;
+  width: 50%;
+  z-index: -1;
+}
+
 .content-grid {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: [menu-start] 37% [menu-end content-start] 63% [content-end];
+  grid-template-columns: [menu-start] 25% [menu-end content-start] 75% [content-end];
   grid-template-rows: auto;
 }
 
 .highlights {
-
   border-left: 10px solid #F4986C;
   grid-column: content-start/content-end;
   grid-template-columns: 33% 33% 33%;
   display: grid;
-
 }
 
+.introtwocandesign {
+  position: absolute;
+  right: 0;
+  width: 80%;
+}
 
-.menu, .project-info {
+.introtext {
+  position: absolute;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 62.5%;
+  text-align: left;
+  vertical-align: middle;
+  color: white;
+}
+
+.menucontainer, .project-info {
   position: fixed;
-  grid-column: menu-start / menu-end;
   height: 100vh;
-  width: 37%;
+  width: 25%;
+  max-width: 480px;
   background-color: #FAE8A5;
 }
 
 .menu {
-  display: flex;
+  position: relative;
+  background-color: #FAE8A5;
+  display: grid;
   align-items: center;
+  /* width: 25%; */
+  height: 100%;
 }
 
 .menu img {
@@ -98,15 +124,19 @@ h1 {
   hyphens: auto;
 }
 
-#project-logo1 {
+.project-logo {
   width: 100%;
-  height: 300px;
   background-image: url("../images/inches-thumb.png");
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 }
 
+.project-logo>img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
 
 #project-logo2 {
   width: 100%;
@@ -124,10 +154,6 @@ h1 {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
-}
-
-.orange-border {
-  background-color: #FAE8A5;
 }
 
 ul {
@@ -185,7 +211,7 @@ li a, table a {
   grid-column: content-start / content-end;
   padding: 3%;
   line-height: 3rem;
-  background-color: #FAE8A5cc;
+  background-color: #FBEDB7;
   padding-bottom: 60px;
 }
 
@@ -220,7 +246,7 @@ li a, table a {
   padding: 5px 10px;
   border-radius: 5px;
   background-color: #313D6C;
-  position: absolute;
+  position: fixed;
   color: #FAE8A5;
   text-decoration: none;
   font-weight: bold;
@@ -335,7 +361,7 @@ li a, table a {
   color: #313D6C;
   line-height: 2;
   height: auto;
-  background-color: #FAE8A5cc;
+  background-color: #FBEDB7;
 }
 
 #contact h1 {
@@ -407,6 +433,17 @@ input, textarea {
 }
 
 @media only screen and (max-width: 899px) {
+  .menucontainer {
+    display: none;
+  }
+
+  .introtext {
+    left: 50%;
+    font-size: 1.5rem;
+    width: 80%;
+    hyphens: auto;
+  }
+
   .menu {
     display: none;
   }
@@ -424,12 +461,13 @@ input, textarea {
     text-align: right;
     display: inline;
     margin: 3% 3% 0 0;
-    width: 100px;
+    width: 80px;
     height: auto;
   }
 
   .toucan-image h1 {
-    margin-top: 0;
+    /* margin-top: 0; */
+    display: none;
   }
 
   #about p {
@@ -437,11 +475,9 @@ input, textarea {
     hyphens: auto;
   }
 
-input {
-  width: 280px;
-}
-
-
+  input {
+    width: 280px;
+  }
 
   .work-grids {
     grid-template-columns: repeat(auto-fill, 100%);
@@ -467,6 +503,6 @@ input {
 
   footer {
     line-height: normal;
-    height:auto;
+    height: auto;
   }
 }
