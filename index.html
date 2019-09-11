@@ -49,9 +49,41 @@
 </head>
 
 <body>
+  <script type="text/javascript">
+    function showMenu() {
+      var elementStyle = document.getElementById('menulist').style;
+      var menuIcon = document.getElementById('burger').style;
+      var crossIcon = document.getElementById('cross').style;
+
+
+      console.log(elementStyle);
+      if (elementStyle.height == "0px" || elementStyle.height == "") {
+        elementStyle.height = '100vh';
+        menuIcon.display = 'none';
+        crossIcon.display = 'inline';
+
+      } else {
+        elementStyle.height = '0px';
+
+        menuIcon.display = 'inline';
+        crossIcon.display = 'none';
+      }
+
+    }
+  </script>
   <div class="nav-bar">
     <h1>twocan design</h1>
-    <i onclick="" class="fas fa-bars"></i>
+    <i onclick="showMenu()" id="burger" class="fas fa-bars"></i>
+    <i onclick="showMenu()" id="cross" class="fas fa-cross"></i>
+
+  </div>
+  <div id="menulist">
+
+    <h2><a onclick="showMenu()" href="#about">About</a></h2>
+    <h2><a onclick="showMenu()" href="#work">Portfolio</a></h2>
+    <h2><a onclick="showMenu()" href="#meetteam">The Team</a></h2>
+    <h2><a onclick="showMenu()" href="#contact">Contact</a></h2>
+
 
   </div>
   <div class="container">
@@ -59,44 +91,43 @@
 
 
     <div class="row" id="homejumbo">
-      <div class="col-12 col-sm-12 introtext">
+      <div class="col-12 col-sm-12" id="introtext">
         <div>
 
-          <h2>Creativity, dedication,<br>and a lot of coffee.</h2>
+          <h1>Creativity, dedication,<br>and a lot of coffee.</h1>
         </div>
       </div>
 
     </div>
 
-    <div class="row">
+    <div class="row" id="about">
       <div class="col-12 col-sm-12">
 
         <h1>Who are we?</h1>
         <p lang="en">Twocan Design is a <b>multidisciplinary</b> creative agency. It sounds like a mouthful but essentially, we create an array of <b>digital solutions</b>. We make sure every problem is solved in a holistic way so we can focus on
           the main goal: delivering great designs.</p>
       </div>
-      <!-- <h1>What we do</h1> -->
 
       <div class="col-12 col-sm-12">
         <div class="we-do">
-          <div class="">
-            <img src="./images/graphic.svg" alt="">
+          <div>
+            <img src="./images/graphic.svg" alt="graphic design">
             <p>graphic design</p>
           </div>
-          <div class="">
-            <img src="./images/ux.svg" alt="">
+          <div>
+            <img src="./images/ux.svg" alt="ux design">
             <p>UX design</p>
           </div>
-          <div class="">
-            <img src="./images/social.svg" alt="">
+          <div>
+            <img src="./images/social.svg" alt="social media">
             <p>social media</p>
           </div>
-          <div class="">
-            <img src="./images/web.svg" alt="">
+          <div>
+            <img src="./images/web.svg" alt="web design">
             <p>web design</p>
           </div>
-          <div class="">
-            <img src="./images/marketing.svg" alt="">
+          <div>
+            <img src="./images/marketing.svg" alt="marketing">
             <p>marketing</p>
           </div>
         </div>
@@ -104,7 +135,7 @@
 
     </div>
 
-    <div class="row">
+    <div class="row" id="work">
       <div class="col-12 col-sm-12">
         <h1>Some of our work</h1>
         <div class="work-grids">
@@ -198,8 +229,34 @@
 
     <div class="row" id="contact">
       <div class="col-12 col-sm-12">
-        <h1>Find us here:</h1>
+        <h1>Let's create something awesome!</h1>
 
+      </div>
+      <div class="col-12 col-sm-12" id="contactform">
+
+        <form class="contact-form" action="https://formspree.io/contact@twocan.design" method="post">
+          <!-- <h1>Or make us find you</h1> -->
+          <div>
+
+            <label>Name*</label>
+            <input name="name" type="text" required>
+          </div>
+          <div>
+
+            <label>Email*</label>
+            <input name="email" type="email" required>
+          </div>
+
+          <div>
+            <label>Message</label>
+            <textarea name="message" type="text" rows="3"></textarea>
+          </div>
+
+          <input id="send-button" type="submit" value="Send!">
+          <input type="hidden" name="_next" value="https://twocan.design/">
+
+
+        </form>
       </div>
       <div class="col-12 col-sm-12 col-md-6">
 
@@ -233,40 +290,19 @@
       </div>
 
     </div>
-    <div class="col-12 col-sm-12">
-
-      <form class="contact-form" action="https://formspree.io/contact@twocan.design" method="post">
-        <h1>Or make us find you!</h1>
-
-        <div class="two-column">
-          <div>
-
-            <label>Name*</label>
-            <input name="name" type="text" required>
-          </div>
-          <div>
-
-            <label>Email*</label>
-            <input name="email" type="email" required>
-          </div>
-
-          <div>
-            <label>Message</label>
-            <input name="message" type="text" rows="3"></input>
-          </div>
-        </div>
-
-        <input id="send-button" type="submit" value="Send!">
-        <input type="hidden" name="_next" value="https://twocan.design/">
 
 
-      </form>
-    </div>
+
+
+
+
+
+
   </div>
 
 
   <footer>
-    <p>©2019 Twocan Design. All rights reserved.</p>
+    <p>made with love in 2019</p>
   </footer>
 
 
