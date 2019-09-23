@@ -84,17 +84,90 @@ body {
   margin-top: 60px;
 }
 
+.plants-home {
+  /* display: block; */
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding-bottom: 250px;
+}
+
+.plants-home img {
+  margin-bottom: 250px;
+  position: absolute;
+  height: 400px;
+}
+
+.plants-home img:first-child {
+  transform: rotate(46deg);
+  bottom: 150px;
+  left: -120px;
+  z-index: -4;
+}
+
+.plants-home img:nth-child(2) {
+  transform: rotate(46deg);
+  bottom: 30px;
+  left: -50px;
+  z-index: -3;
+}
+
+.plants-home img:nth-child(3) {
+  transform: rotate(60deg);
+  bottom: -200px;
+  left: -10px;
+  z-index: -1;
+}
+
+.plants-home img:nth-child(4) {
+  height: 300px;
+  transform: rotate(60deg);
+  bottom: 0;
+  left: -30px;
+  z-index: -2;
+}
+
+.plants-home img:nth-child(5) {
+  height: 300px;
+  transform: rotate(-70deg) scaleX(-1);
+  bottom: 200px;
+  right: -80px;
+  z-index: -3;
+}
+
+.plants-home img:nth-child(6) {
+  transform: rotate(-60deg) scaleX(-1);
+  bottom: 0px;
+  right: -70px;
+  z-index: -2;
+}
+
+.plants-home img:nth-child(7) {
+  transform: rotate(-75deg) scaleX(-1);
+  bottom: -120px;
+  right: -50px;
+  z-index: -1;
+}
+
+
 #homejumbo {
   height: 100vh;
 }
 
-#introtext {
+#logoheader {
+  width: 100%;
+}
+
+
+#introtext, #intrologo {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
   flex-flow: column;
   height: 100%;
+  font-size: 1.5rem;
 }
 
 .about p {
@@ -449,6 +522,10 @@ footer p {
 
   .nav-bar {
     display: none;
+  }
+
+  #menulist {
+    padding: 0;
   }
 
   .container {
