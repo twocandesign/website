@@ -80,7 +80,7 @@ body {
   z-index: 99;
 }
 
-.row:not(:first-of-type) {
+.row:nth-child(n+4) {
   margin-top: 60px;
 }
 
@@ -150,7 +150,6 @@ body {
   z-index: -1;
 }
 
-
 #homejumbo {
   height: 100vh;
 }
@@ -158,7 +157,6 @@ body {
 #logoheader {
   width: 100%;
 }
-
 
 #introtext, #intrologo {
   display: flex;
@@ -381,6 +379,74 @@ footer p {
 }
 
 @media (max-width: 575px) {
+  #homejumbo {
+    display: none;
+  }
+  #logojumbo-mobile {
+    padding-top: 100px;
+    height: 20vh;
+  }
+
+  #textjumbo-mobile {
+    height: 80vh;
+    margin: 0;
+  }
+
+  #logoheader {
+    bottom: 0;
+  }
+
+  .plants-home img {
+    margin-bottom: 250px;
+    position: absolute;
+    height: 400px;
+  }
+
+  .plants-home img:first-child {
+    display: none
+  }
+
+  .plants-home img:nth-child(2) {
+    display: none
+  }
+
+  .plants-home img:nth-child(3) {
+    transform: rotate(30deg);
+    bottom: -50px;
+    left: -60px;
+    z-index: -2;
+  }
+
+  .plants-home img:nth-child(4) {
+    height: 300px;
+    transform: rotate(60deg);
+    bottom: -100px;
+    left: -30px;
+    z-index: -1;
+  }
+
+  .plants-home img:nth-child(5) {
+    height: 300px;
+    transform: rotate(-70deg) scaleX(-1);
+    bottom: 100px;
+    right: -150px;
+    z-index: -3;
+  }
+
+  .plants-home img:nth-child(6) {
+    transform: rotate(-60deg) scaleX(-1);
+    bottom: -50px;
+    right: -100px;
+    z-index: -2;
+  }
+
+  .plants-home img:nth-child(7) {
+    transform: rotate(-75deg) scaleX(-1);
+    bottom: -150px;
+    right: -100px;
+    z-index: -1;
+  }
+
   .polaroids:nth-child(2) {
     margin-bottom: 30px;
   }
@@ -456,6 +522,12 @@ footer p {
 }
 
 @media (min-width: 576px) {
+  #logojumbo-mobile {
+    display: none;
+  }
+  #textjumbo-mobile {
+    display: none;
+  }
   p {
     font-size: 1rem;
     line-height: 1.9rem;
