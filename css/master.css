@@ -91,6 +91,7 @@ body {
   height: 100vh;
   overflow: hidden;
   padding-bottom: 250px;
+  z-index: -2;
 }
 
 .plants-home img {
@@ -339,9 +340,13 @@ footer {
   height: 70px;
   background-color: #313D6C;
   color: white;
-  line-height: 70px;
+  line-height: 70px !important;
   text-align: center;
   margin-top: 30px;
+}
+
+footer>p {
+  line-height: 70px;
 }
 
 footer p {
@@ -349,6 +354,28 @@ footer p {
 }
 
 /* PORTFOLIO STUFFS */
+#menu-desktop {
+  height: 70px;
+  line-height: 70px;
+
+}
+
+#menu-desktop a {
+  text-decoration: none;
+}
+#menu-desktop h1 {
+  margin: 0;
+}
+
+#menu-desktop-links {
+  text-align: right;
+}
+
+#menu-desktop-links a {
+  margin: 0 30px;
+  font-weight: bold;
+}
+
 .taglist {
   padding: 0 3% !important;
   margin-top: 0;
@@ -382,6 +409,7 @@ footer p {
   #homejumbo {
     display: none;
   }
+
   #logojumbo-mobile {
     padding-top: 100px;
     height: 20vh;
@@ -525,9 +553,11 @@ footer p {
   #logojumbo-mobile {
     display: none;
   }
+
   #textjumbo-mobile {
     display: none;
   }
+
   p {
     font-size: 1rem;
     line-height: 1.9rem;
