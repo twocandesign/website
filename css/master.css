@@ -382,14 +382,8 @@ footer p {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
 .project-info {
   margin-top: 2rem;
-=======
-.taglist {
-  padding: 0 !important;
-  margin-top: 0;
->>>>>>> 86c2dc5094222e31250a65bb3e95ffadb70afcb0
 }
 
 .project-info h2 {
@@ -422,7 +416,6 @@ footer p {
   hyphenate-limit-chars: 10 4 4;
 }
 
-<<<<<<< HEAD
 .main-gallery {
   height: 500px;
   /* border: 2px solid #313D6C; */
@@ -452,9 +445,6 @@ footer p {
     height: 300px;
   }
 
-=======
-@media (max-width: 575px) {
->>>>>>> 86c2dc5094222e31250a65bb3e95ffadb70afcb0
   #menu-desktop {
     display: none;
   }
