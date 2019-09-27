@@ -357,12 +357,12 @@ footer p {
 #menu-desktop {
   height: 70px;
   line-height: 70px;
-
 }
 
 #menu-desktop a {
   text-decoration: none;
 }
+
 #menu-desktop h1 {
   margin: 0;
 }
@@ -377,7 +377,7 @@ footer p {
 }
 
 .taglist {
-  padding: 0 3% !important;
+  padding: 0 !important;
   margin-top: 0;
 }
 
@@ -405,7 +405,21 @@ footer p {
   box-sizing: border-box;
 }
 
+.project-description {
+  text-align: justify;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
+}
+
 @media (max-width: 575px) {
+  #menu-desktop {
+    display: none;
+  }
+
   #homejumbo {
     display: none;
   }
