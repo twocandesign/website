@@ -261,6 +261,7 @@ body {
   color: white;
   font-weight: 700;
   text-align: center;
+  font-size: 1.7rem;
 }
 
 #linkphones {
@@ -348,6 +349,7 @@ footer {
   color: white;
   line-height: 10vh !important;
   text-align: center;
+  margin-top: 30px;
 }
 
 footer>p {
@@ -470,7 +472,7 @@ footer p {
   .plants-home img {
     margin-bottom: 250px;
     position: absolute;
-    height: 400px;
+    height: 350px;
   }
 
   .plants-home img:first-child {
@@ -499,14 +501,14 @@ footer p {
   .plants-home img:nth-child(5) {
     height: 300px;
     transform: rotate(-70deg) scaleX(-1);
-    bottom: 100px;
+    bottom: 40px;
     right: -150px;
     z-index: -3;
   }
 
   .plants-home img:nth-child(6) {
     transform: rotate(-60deg) scaleX(-1);
-    bottom: -50px;
+    bottom: -80px;
     right: -100px;
     z-index: -2;
   }

@@ -8,8 +8,9 @@
 
   <title>Twocan Design | Design and Brand Strategy</title>
 
-  <link rel="stylesheet" href="./css/master.css">
-
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/flickity.min.css" media="screen">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139307399-1"></script>
   <script>
@@ -19,6 +20,8 @@
 
   gtag('config', 'UA-139307399-1');
   </script>
+
+  <script src="https://kit.fontawesome.com/3e660eea1f.js"></script>
 
 
   <!-- SOCIAL STUFF -->
@@ -32,13 +35,13 @@
 
   <!-- FAVICON -->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=69Pmbx30WB">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=69Pmbx30WB">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=69Pmbx30WB">
-  <link rel="manifest" href="/site.webmanifest?v=69Pmbx30WB">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=69Pmbx30WB" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=69Pmbx30WB">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=69Pmbx30WB">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=69Pmbx30WB">
+  <link rel="manifest" href="../site.webmanifest?v=69Pmbx30WB">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg?v=69Pmbx30WB" color="#5bbad5">
 
-  <link rel="shortcut icon" href="/favicon.ico?v=69Pmbx30WB">
+  <link rel="shortcut icon" href="../favicon.ico?v=69Pmbx30WB">
 
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
@@ -46,29 +49,97 @@
 </head>
 
 <body>
-  <div class="back-button">
-    <p>
-      <</p> </div> <div class="project-info">
-        <div id="project-logo1">
+  <script type="text/javascript">
+    function showMenu() {
+      var elementStyle = document.getElementById('menulist').style;
+      var menuIcon = document.getElementById('burger').style;
+      var crossIcon = document.getElementById('cross').style;
+
+
+      console.log(elementStyle);
+      if (elementStyle.height == "0px" || elementStyle.height == "") {
+        elementStyle.height = '100vh';
+        menuIcon.display = 'none';
+        crossIcon.display = 'inline';
+
+      } else {
+        elementStyle.height = '0px';
+
+        menuIcon.display = 'inline';
+        crossIcon.display = 'none';
+      }
+
+    }
+  </script>
+  <div class="nav-bar">
+    <a href="../index.html">
+      <h1>twocan design</h1>
+    </a>
+    <i onclick="showMenu()" id="burger" class="fas fa-bars"></i>
+    <i onclick="showMenu()" id="cross" class="fas fa-times"></i>
+
+  </div>
+  <div id="menulist">
+
+    <h2><a onclick="showMenu()" href="../index.html#about">About</a></h2>
+    <h2><a onclick="showMenu()" href="../index.html#work">Portfolio</a></h2>
+    <h2><a onclick="showMenu()" href="../index.html#meetteam">The Team</a></h2>
+    <h2><a onclick="showMenu()" href="../index.html#contact">Contact</a></h2>
+
+
+  </div>
+  <div class="container">
+    <div id="menu-desktop" class="row">
+      <div class="col-4 col-sm-4">
+        <a href="../index.html">
+          <h1>twocan design</h1>
+        </a>
+
+      </div>
+      <div id="menu-desktop-links" class="col-8 col-sm-8">
+        <a href="../#about">about</a>
+        <a href="../#work">portfolio</a>
+        <a href="../#meetteam">the team</a>
+        <a href="../#contact">contact</a>
+      </div>
+    </div>
+
+
+    <div class="row project-info">
+      <div class="col-12 col-sm-12 col-md-5">
+        <h1>Sakana Tengoku</h1>
+        <h2>2019</h2>
+        <p class="taglist"> <span class="keytags">brand identity</span> <span class="keytags">graphic design</span></p>
+        <p lang="en" class="project-description">Sakana Tengoku is a new seafood restaurant opening in Kyoto, Japan. In English Sakana Tengoku translates to “fish heaven”. The restaurant wants to create an emphasis on involving the community; through cooking classes, fish filleting workshops, eating tournaments, fishing competitions and other community involvement events.
+        </p>
+
+      </div>
+      <div class="col-12 -col-sm-12 col-md-7">
+        <div class="main-gallery js-flickity" data-flickity-options='{ "cellAlign": "center", "contain": true, "pageDots": false,   "wrapAround": true }'>
+          <div class="gallery-cell"> <img src="../images/project3/header.svg" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project3/sign.jpg" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project3/poster.jpg" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project3/food.jpg" alt=""> </div>
 
         </div>
-        <h1>Inches Beauty Salon</h1>
-        <p class="taglist"><span class="keytags">web design</span> <span class="keytags">social media</span> <span class="keytags">SEO</span></p>
-        <p>Inches is a beauty salon in the center of the Hague that provides exclusive high quality services for women. We had the task to redesign Inches’ old website to make it more attractive and showcase more of what they do.</p>
-        <p>Part of the project also included setting up new domain names and email hosting, as well as optimize Inches’ look on social media.</p>
-  </div>
-  <div class="content-grid orange-border">
-    <div class="">
 
+      </div>
     </div>
-    <!-- intro section -->
 
-    <img src="../images/syncmockup.png" alt="" id="mockup">
+
+
   </div>
+
 
   <footer>
-    <p>©2019 Twocan Design. All rights reserved.</p>
+    <p>made with love in 2019</p>
   </footer>
+
+
+  <script src="../flickity.pkgd.min.js"></script>
+  <script type="text/javascript">
+    var modal = document.get
+  </script>
 </body>
 
 </html>

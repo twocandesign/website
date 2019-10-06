@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="../css/master.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="../css/flickity.min.css" media="screen">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139307399-1"></script>
   <script>
@@ -20,6 +20,8 @@
 
   gtag('config', 'UA-139307399-1');
   </script>
+
+  <script src="https://kit.fontawesome.com/3e660eea1f.js"></script>
 
 
   <!-- SOCIAL STUFF -->
@@ -33,13 +35,13 @@
 
   <!-- FAVICON -->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=69Pmbx30WB">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=69Pmbx30WB">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=69Pmbx30WB">
-  <link rel="manifest" href="/site.webmanifest?v=69Pmbx30WB">
-  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=69Pmbx30WB" color="#5bbad5">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=69Pmbx30WB">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=69Pmbx30WB">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=69Pmbx30WB">
+  <link rel="manifest" href="../site.webmanifest?v=69Pmbx30WB">
+  <link rel="mask-icon" href="../safari-pinned-tab.svg?v=69Pmbx30WB" color="#5bbad5">
 
-  <link rel="shortcut icon" href="/favicon.ico?v=69Pmbx30WB">
+  <link rel="shortcut icon" href="../favicon.ico?v=69Pmbx30WB">
 
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
@@ -47,30 +49,99 @@
 </head>
 
 <body>
-  <div class="project-info">
-    <a class="back-button" href="../index.html"><i class="fas fa-chevron-left"></i> back</a>
-    <div id="project-logo5">
+  <script type="text/javascript">
+    function showMenu() {
+      var elementStyle = document.getElementById('menulist').style;
+      var menuIcon = document.getElementById('burger').style;
+      var crossIcon = document.getElementById('cross').style;
 
-    </div>
-    <p class="taglist"><span class="keytags">graphic design</span> <span class="keytags">marketing</span> <span class="keytags">branding</span></p>
-    <p>Felix is a government backed company which helps young entrepreneurs secure funding for clean energy startups in Denmark. They wanted to appeal to young entrepreneurs and help connect them to government institutions, investment firms, and
-      independent investors. This project was done as part of a design challenge.</p>
+
+      console.log(elementStyle);
+      if (elementStyle.height == "0px" || elementStyle.height == "") {
+        elementStyle.height = '100vh';
+        menuIcon.display = 'none';
+        crossIcon.display = 'inline';
+
+      } else {
+        elementStyle.height = '0px';
+
+        menuIcon.display = 'inline';
+        crossIcon.display = 'none';
+      }
+
+    }
+  </script>
+  <div class="nav-bar">
+    <a href="../index.html">
+      <h1>twocan design</h1>
+    </a>
+    <i onclick="showMenu()" id="burger" class="fas fa-bars"></i>
+    <i onclick="showMenu()" id="cross" class="fas fa-times"></i>
+
   </div>
-  <div class="content-grid orange-border">
-    <div class="highlights">
+  <div id="menulist">
 
-        <img src="../images/project5/insta-ad.jpg" id="proj5high1" style="width:100%">
-        <img src="../images/project5/mobile-blue.jpg" style="width:200%;">
-
-    </div>
-    <!-- intro section -->
+    <h2><a onclick="showMenu()" href="../index.html#about">About</a></h2>
+    <h2><a onclick="showMenu()" href="../index.html#work">Portfolio</a></h2>
+    <h2><a onclick="showMenu()" href="../index.html#meetteam">The Team</a></h2>
+    <h2><a onclick="showMenu()" href="../index.html#contact">Contact</a></h2>
 
 
   </div>
+  <div class="container">
+    <div id="menu-desktop" class="row">
+      <div class="col-4 col-sm-4">
+        <a href="../index.html">
+          <h1>twocan design</h1>
+        </a>
+
+      </div>
+      <div id="menu-desktop-links" class="col-8 col-sm-8">
+        <a href="../#about">about</a>
+        <a href="../#work">portfolio</a>
+        <a href="../#meetteam">the team</a>
+        <a href="../#contact">contact</a>
+      </div>
+    </div>
+
+
+    <div class="row project-info">
+      <div class="col-12 col-sm-12 col-md-5">
+        <h1>felix</h1>
+        <h2>2019</h2>
+        <p class="taglist"> <span class="keytags">brand identity</span> <span class="keytags">graphic design</span> <span class="keytags">marketing</span></p>
+        <p lang="en" class="project-description">Felix is a government backed company which helps young entrepreneurs secure funding for clean energy startups in Denmark. They wanted to appeal to young entrepreneurs and help connect them to government institutions, investment firms, and independent investors. This project was done as part of a design challenge.
+        </p>
+
+      </div>
+      <div class="col-12 -col-sm-12 col-md-7">
+        <div class="main-gallery js-flickity" data-flickity-options='{ "cellAlign": "center", "contain": true, "pageDots": false,   "wrapAround": true }'>
+          <div class="gallery-cell"> <img src="../images/project5/felix-logo.png" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project5/tshirt.jpg" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project5/card.jpg" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project5/solar.gif" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project5/mobile-blue.jpg" alt=""> </div>
+          <div class="gallery-cell"> <img src="../images/project5/insta-ad.jpg" alt=""> </div>
+
+        </div>
+
+      </div>
+    </div>
+
+
+
+  </div>
+
 
   <footer>
-    <p>©2019 Twocan Design. All rights reserved.</p>
+    <p>made with love in 2019</p>
   </footer>
+
+
+  <script src="../flickity.pkgd.min.js"></script>
+  <script type="text/javascript">
+    var modal = document.get
+  </script>
 </body>
 
 </html>
